@@ -211,11 +211,11 @@ void Main_MenuEvent (void* ptr, int event) {
         if(ui_singlemode.integer){
             trap_Cmd_ExecuteText( EXEC_APPEND, "ns_openscript_ui new_game.ns;" );
         }
-		UI_StartServerMenu( qtrue );
+		trap_Cmd_ExecuteText( EXEC_APPEND, "map qs_flatgrass");
 		break;
 
     case ID_SKIRMISH:
-        UI_StartServerMenu(qtrue);
+        trap_Cmd_ExecuteText( EXEC_APPEND, "map qs_flatgrass"); // i dont give a shid if its creating an mp game, or an sp game, just load dis map, use dedicated to make your server.
         break;
 
 	case ID_MULTIPLAYER:
@@ -356,8 +356,9 @@ static void Main_MenuDraw( void ) {
 	   // standard menu drawing
 	   Menu_Draw( &s_main.menu );
    }
-	UI_DrawString( 600+uis.wideoffset, 450, "Quake Sandbox v8.1", UI_RIGHT|UI_SMALLFONT, color );
-	UI_DrawString( 600+uis.wideoffset, 465, "by Noire.dev", UI_RIGHT|UI_SMALLFONT, color );
+	UI_DrawString( 600+uis.wideoffset, 440, "Cytrine Test game ALPHA", UI_RIGHT|UI_SMALLFONT, color );
+	UI_DrawString( 600+uis.wideoffset, 455, "A game brought to you by: Noire.dev AND Pauli1505", UI_RIGHT|UI_SMALLFONT, color );
+	UI_DrawString( 600+uis.wideoffset, 465, "THIS GAME IS A DERIVATIVE OF NOIRE.DEV'S QUAKE SANDBOX.", UI_RIGHT|UI_SMALLFONT, color );
 }
 
 
