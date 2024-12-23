@@ -27,7 +27,6 @@ char	*cg_customSoundNames[MAX_CUSTOM_SOUNDS] = {
 	"*death1.wav",
 	"*death2.wav",
 	"*death3.wav",
-	"*jump1.wav",
 	"*pain25_1.wav",
 	"*pain50_1.wav",
 	"*pain75_1.wav",
